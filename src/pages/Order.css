@@ -68,13 +68,13 @@
 .category-tab:hover {
   border-color: #d4a574;
   background-color: rgba(212, 165, 116, 0.1);
-  color: #2c1810;
+  color: #d4a574;
 }
 
 .category-tab.active {
   background-color: #d4a574;
   color: #2c1810;
-  border-color: #d4a574;
+  border-color: #c8c3be;
   font-weight: 600;
 }
 
