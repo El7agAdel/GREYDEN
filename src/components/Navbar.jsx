@@ -6,11 +6,11 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-brand">
-          <img src="/logo2.png" alt="Greyden Coffee Logo" className="navbar-logo" />
+          <img  src={`${import.meta.env.BASE_URL}logo2.png`}  alt="Greyden Coffee Logo"  className="navbar-logo" />
         </Link>
         <ul className="navbar-menu">
           <li>
-            <Link to="/" className="navbar-link">Home</Link>
+            <Link to="/GREYDEN" className="navbar-link">Home</Link>
           </li>
           <li>
             <Link to="/menu" className="navbar-link">Menu</Link>
