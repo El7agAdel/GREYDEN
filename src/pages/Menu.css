@@ -1,0 +1,453 @@
+.menu-page {
+  min-height: calc(100vh - 80px);
+  background: transparent;
+  padding: clamp(1rem, 3vw, 3rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto clamp(1.5rem, 4vw, 3rem);
+  padding: 0 var(--page-side-padding);
+}
+
+.menu-header h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.menu-header p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  color: #666;
+}
+
+.menu-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-side-padding);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: clamp(1rem, 4vw, 3rem);
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.category-sidebar {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-sidebar h2 {
+  font-size: 1.5rem;
+  color: #2c1810;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.category-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.category-btn {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-btn:hover {
+  border-color: #d4a574;
+  background-color: rgba(212, 165, 116, 0.1);
+  color: #2c1810;
+}
+
+.category-btn.active {
+  background-color: #d4a574;
+  color: #2c1810;
+  border-color: #d4a574;
+  font-weight: 600;
+}
+
+.menu-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+  width: 100%;
+}
+
+.category-info h2 {
+  font-size: 2rem;
+  color:  #f5f5f5;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.category-info p {
+  font-size: 1.1rem;
+  color: #929191;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  width: 100%;
+}
+
+.drink-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.drink-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #d4a574;
+}
+
+.drink-info h3 {
+  font-size: 1.4rem;
+  color: #2c1810;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.drink-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+  text-align: center;
+}
+
+.drink-price {
+  font-size: 1.5rem;
+  color: #d4a574;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.drink-sizes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.size-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(212, 165, 116, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.size-label {
+  font-size: 1rem;
+  color: #2c1810;
+  font-weight: 600;
+}
+
+.size-price {
+  font-size: 1.1rem;
+  color: #d4a574;
+  font-weight: 700;
+}
+
+@media (max-width: 968px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .category-sidebar {
+    position: static;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .category-list {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 0.5rem 0;
+    justify-content: flex-start;
+    width: 100%;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .category-list::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .category-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .category-list::-webkit-scrollbar-thumb {
+    background: rgba(212, 165, 116, 0.3);
+    border-radius: 3px;
+  }
+
+  .category-list li {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .category-list li:first-child {
+    margin-left: 0;
+  }
+
+  .category-list li:last-child {
+    margin-right: 1rem;
+  }
+
+  .category-btn {
+    white-space: nowrap;
+    min-width: 150px;
+  }
+
+  .menu-content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    padding: clamp(1rem, 2vw, 2rem) 0;
+  }
+
+  .menu-header {
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    padding: 0 var(--page-side-padding);
+  }
+
+  .menu-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .menu-header p {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+
+  .menu-container {
+    padding: 0 var(--page-side-padding);
+    gap: clamp(1rem, 3vw, 2rem);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-sidebar {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    padding-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  }
+  
+  .category-list {
+    margin-left: 0;
+  }
+
+  .drinks-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    width: 100%;
+    justify-items: center;
+  }
+
+  .drink-card {
+    padding: clamp(1rem, 2vw, 1.25rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-page {
+    padding: clamp(1rem, 2vw, 1.5rem) 0;
+  }
+
+  .menu-header {
+    padding: 0 var(--page-side-padding);
+  }
+
+  .menu-header h1 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  .menu-header p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .menu-container {
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .drinks-grid {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .category-sidebar {
+    padding: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .category-sidebar h2 {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  }
+
+  .category-btn {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+    min-width: 120px;
+  }
+
+  .category-info h2 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+
+  .category-info p {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+
+  .drink-info h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .drink-description {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+
+  .drink-price {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+
+  .size-option {
+    padding: clamp(0.5rem, 1.2vw, 0.6rem);
+  }
+
+  .size-label {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+
+  .size-price {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .menu-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .menu-header p {
+    font-size: 0.8rem;
+  }
+
+  .category-btn {
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+}
+

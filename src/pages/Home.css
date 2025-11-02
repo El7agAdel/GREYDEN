@@ -1,0 +1,242 @@
+.home {
+  flex: 1;
+}
+
+.hero {
+  background: transparent;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f5;
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: clamp(1.75rem, 7vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #d4a574;
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 3.5vw, 1.8rem);
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  color: #e0e0e0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: #d4a574;
+  border: 2px solid #d4a574;
+}
+
+.btn-primary:hover {
+  background-color: #d4a574;
+  color: #2c1810;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #d4a574;
+  border: 2px solid #d4a574;
+}
+
+.btn-secondary:hover {
+  background-color: #d4a574;
+  color: #2c1810;
+  transform: translateY(-2px);
+}
+
+.btn-location {
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+}
+
+.btn-location:hover {
+  background-color: rgba(245, 245, 245, 0.2);
+  border-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.features {
+  padding: clamp(2rem, 6vw, 5rem) 0;
+  background: transparent;
+}
+
+.container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-side-padding);
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #2c1810;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: rgba(249, 249, 249, 0.9);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #d4a574;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 400px;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
